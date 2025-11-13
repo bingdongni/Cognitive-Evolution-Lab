@@ -1,0 +1,347 @@
+# Cognitive Evolution Lab - 创造力训练配置
+# 作者: bingdongni
+# 此配置专门用于创意生成和创造力训练实验
+
+# 全局设置
+global:
+  version: "1.0.0"
+  debug: false
+  log_level: "INFO"
+  save_path: "./creativity_results"
+  random_seed: 42
+  device: "auto"
+
+# 认知模型配置 - 创造力优化
+cognitive_models:
+  # 记忆系统 - 支持创意联想
+  memory:
+    type: "creative_memory"
+    capacity: 5000
+    episodic_weight: 0.4    # 增加情景记忆权重
+    semantic_weight: 0.4    # 增加语义记忆权重
+    procedural_weight: 0.2
+    
+  # 注意力机制 - 发散性注意
+  attention:
+    type: "divergent_attention"
+    dimensions: 512
+    heads: 8
+    dropout: 0.05           # 减少dropout以保留更多信息
+    divergent_focus: true   # 发散性注意
+    creative_exploration: 0.8  # 创意探索强度
+    
+  # 推理系统 - 类比和关联推理
+  reasoning:
+    type: "creative_reasoning"
+    symbolic_ratio: 0.3     # 减少符号推理比例
+    neural_ratio: 0.7       # 增加神经网络推理
+    logic_depth: 7          # 增加推理深度
+    analogy_thinking: true  # 启用类比思维
+    association_strength: 0.8  # 关联强度
+    
+  # 学习机制 - 创造性学习
+  learning:
+    type: "creative_learning"
+    adaptation_rate: 0.02   # 提高适应率
+    consolidation_rate: 0.002
+    lifelong_learning: true
+    creative_improvement: true
+    novelty_drive: 0.7      # 新颖性驱动
+    
+  # 创造力模块 - 详细配置
+  creativity:
+    divergent_thinking: true
+    convergent_thinking: true
+    novelty_threshold: 0.7
+    aesthetic_score: true    # 启用美学评分
+    originality_weight: 0.8   # 原创性权重
+    fluency_weight: 0.6       # 流畅性权重
+    flexibility_weight: 0.7   # 灵活性权重
+    elaboration_weight: 0.5   # 精致化权重
+    
+    # 发散思维参数
+    divergent_params:
+      idea_generation_rate: 0.1
+      association_breadth: 0.8
+      cognitive_flexibility: 0.7
+      
+    # 收敛思维参数
+    convergent_params:
+      evaluation_criteria: ["novelty", "feasibility", "value"]
+      selection_threshold: 0.6
+      refinement_iterations: 3
+      
+    # 创意评估标准
+    evaluation_metrics:
+      originality_score: true
+      usefulness_score: true
+      aesthetic_score: true
+      surprise_score: true
+      
+  # 观察力模块 - 细节和模式发现
+  observation:
+    multi_scale: true
+    pattern_recognition: true
+    anomaly_detection: true
+    temporal_analysis: true
+    creative_perception: true  # 创意感知
+    aesthetic_sensitivity: 0.8  # 美学敏感性
+    
+    # 视觉创意参数
+    visual_creativity:
+      shape_novelty: 0.7
+      color_harmony: 0.6
+      composition_balance: 0.5
+      artistic_style: "flexible"
+
+# 世界模拟器配置 - 创意环境
+world_simulator:
+  # 物理世界 - 创意场景
+  physics_engine: "creative_physics"
+  gravity: 9.81
+  timestep: 0.001
+  max_objects: 200
+  
+  # 社会世界 - 创意协作
+  social_agents: 30
+  interaction_radius: 15.0
+  cooperation_factor: 0.8      # 高合作度
+  creative_collaboration: true # 创意协作
+  brainstorming_mode: true     # 头脑风暴模式
+  
+  # 游戏世界 - 创意挑战
+  game_environments: ["creative_puzzles", "art_challenges", "innovation_games"]
+  unity_agents: false
+  ml_agents_path: "./ml-agents"
+  
+  # 现实数据集成 - 创意资源
+  real_data_sources:
+    stock_data: false
+    social_media: true          # 创意灵感
+    weather: true              # 环境观察
+    news_feeds: true           # 创新趋势
+    
+  # 创意环境
+  creative_environments:
+    - name: "art_studio"
+      objects: ["canvas", "brushes", "colors"]
+      creativity_boost: 0.2
+      
+    - name: "brainstorming_room"
+      objects: ["whiteboard", "sticky_notes", "markers"]
+      creativity_boost: 0.3
+      
+    - name: "nature_garden"
+      objects: ["plants", "flowers", "water_features"]
+      creativity_boost: 0.4
+
+# 交互系统配置 - 创意表达
+interactive_systems:
+  # 具身智能 - 创意表达
+  embodied_intelligence:
+    body_model: "creative_humanoid"
+    motor_control: "expressive"
+    sensory_fusion: "aesthetic"
+    balance_control: true
+    creative_movement: true      # 创意动作
+    
+  # 多模态感知 - 创意输入
+  multimodal_perception:
+    vision:
+      enabled: true
+      resolution: [224, 224]
+      model: "creative_vision_transformer"
+      aesthetic_analysis: true   # 美学分析
+      artistic_style_recognition: true  # 艺术风格识别
+      
+    audio:
+      enabled: true
+      sample_rate: 16000
+      model: "creative_audio_bert"
+      music_emotion_recognition: true   # 音乐情感识别
+      sound_novelty_detection: true     # 声音新颖性检测
+      
+    touch:
+      enabled: true
+      sensor_count: 50
+      sensitivity: 0.9  # 高敏感性
+      texture_creativity: 0.8  # 纹理创意
+      
+    text:
+      enabled: true
+      model: "creative_language_model"
+      poetry_generation: true   # 诗歌生成
+      story_creation: true      # 故事创作
+      
+  # 动作规划 - 创意行为
+  action_planning:
+    horizon: 15               # 更长的时间视野
+    replanning_rate: 0.05     # 更频繁的重新规划
+    uncertainty_handling: "creative_ambiguity"
+    safety_constraints: true
+    creative_freedom: 0.7     # 创意自由度
+
+# 进化引擎配置 - 创意进化
+evolution_engine:
+  # 遗传算法 - 创意优化
+  genetic:
+    population_size: 50
+    mutation_rate: 0.15       # 增加变异率
+    crossover_rate: 0.9       # 增加交叉率
+    elitism_rate: 0.15        # 增加精英比例
+    
+  # 多智能体进化 - 创意协作
+  multi_agent:
+    cooperation_threshold: 0.8
+    competition_weight: 0.2    # 减少竞争
+    communication_enabled: true
+    coalition_formation: true
+    creative_synergy: true     # 创意协同效应
+    
+  # 知识进化 - 创意知识
+  knowledge_evolution:
+    retention_rate: 0.98      # 更高保留率
+    forgetting_rate: 0.02     # 更低遗忘率
+    transfer_learning: true
+    knowledge_distillation: true
+    creative_knowledge: true   # 创意知识库
+    
+  # 环境共演化 - 创意适应
+  co_evolution:
+    adaptation_rate: 0.02
+    complexity_growth: 0.08   # 更快复杂度增长
+    difficulty_scaling: true
+    creative_challenges: true  # 创意挑战
+
+# 可视化配置 - 创意展示
+visualization:
+  # 3D渲染 - 创意展示
+  render_3d:
+    enabled: true
+    engine: "advanced_renderer"
+    resolution: [1920, 1080]
+    fps: 60
+    lighting: true
+    shadows: true
+    artistic_mode: true       # 艺术模式
+    
+  # 数据仪表板 - 创意监控
+  dashboard:
+    framework: "creative_dash"
+    refresh_rate: 1.0
+    charts: ["radar", "heatmap", "network", "artistic_visualization"]
+    
+  # 实时监控 - 创意追踪
+  monitoring:
+    brain_activity: true
+    learning_curves: true
+    evolution_progress: true
+    environment_state: true
+    creativity_metrics: true    # 创意指标追踪
+
+# 实验配置 - 创造力实验
+experiments:
+  # 认知能力测试 - 创意版本
+  cognitive_tests:
+    memory_tests: ["episodic", "semantic", "creative_associative"]
+    reasoning_tests: ["analogical", "creative_inference", "divergent_reasoning"]
+    creativity_tests: ["fluency", "flexibility", "originality", "elaboration", "artistic"]
+    observation_tests: ["visual_artistic", "aesthetic", "creative_pattern"]
+    attention_tests: ["divergent", "creative_focus", "artistic_attention"]
+    imagination_tests: ["creative_scenario", "artistic_imagery", "innovative_thinking"]
+    
+  # 进化实验 - 创意进化
+  evolution_experiments:
+    single_agent_evolution: true
+    multi_agent_evolution: true
+    co_evolution: true
+    cultural_evolution: true
+    creative_evolution: true    # 创意进化
+    
+  # 比较基准 - 创意基准
+  benchmarks:
+    include_traditional_ai: false
+    include_human_performance: true
+    include_evolutionary_algorithms: true
+
+# 创意任务配置
+creative_tasks:
+  # 创意生成任务
+  generation_tasks:
+    - name: "product_innovation"
+      difficulty: "medium"
+      domains: ["technology", "design", "utility"]
+      evaluation_criteria: ["novelty", "usefulness", "feasibility"]
+      
+    - name: "artistic_creation"
+      difficulty: "high"
+      domains: ["visual", "musical", "literary"]
+      evaluation_criteria: ["aesthetic", "originality", "emotional_impact"]
+      
+    - name: "storytelling"
+      difficulty: "medium"
+      domains: ["narrative", "character", "plot"]
+      evaluation_criteria: ["creativity", "coherence", "engagement"]
+      
+  # 创意挑战任务
+  challenge_tasks:
+    - name: "constraint_innovation"
+      constraints: ["limited_resources", "time_pressure", "specific_requirements"]
+      creative_demands: ["resourcefulness", "adaptability", "solution_flexibility"]
+      
+    - name: "cross_domain_transfer"
+      source_domain: "nature"
+      target_domain: "technology"
+      creative_challenge: "bio_inspiration"
+      
+  # 协作创意任务
+  collaboration_tasks:
+    - name: "brainstorming_session"
+      participants: 4
+      technique: "round_robin"
+      duration: 30  # minutes
+      
+    - name: "creative_workshop"
+      participants: 8
+      technique: "design_thinking"
+      duration: 60  # minutes
+
+# 性能配置 - 创意优化
+performance:
+  # 并行计算 - 创意加速
+  parallel_processing:
+    cpu_cores: "auto"
+    gpu_devices: 1
+    distributed: false
+    
+  # 内存管理 - 创意缓存
+  memory_management:
+    cache_size: "2GB"
+    garbage_collection: true
+    memory_monitoring: true
+    
+  # 存储优化 - 创意结果
+  storage:
+    model_checkpointing: true
+    data_compression: false     # 保留高质量创意结果
+    auto_save_interval: 1800   # 30分钟
+
+# 调试配置 - 创意调试
+debug:
+  detailed_logging: false
+  performance_profiling: false
+  memory_profiling: false
+  visualization_debug: false
+  save_intermediate_results: true  # 保存中间创意结果
+  creativity_logging: true         # 创意过程日志
+
+# 安全配置 - 创意保护
+security:
+  sandbox_environment: true
+  resource_limits:
+    cpu_time: 3600  # 1小时
+    memory: "4GB"
+    disk_space: "5GB"
+  input_validation: true
+  output_sanitization: true
+  creative_content_filter: true    # 创意内容过滤

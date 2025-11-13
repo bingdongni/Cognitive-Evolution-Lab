@@ -1,0 +1,456 @@
+# 推理系统示例数据和案例
+# 作者: bingdongni
+# 用于演示各种推理能力的数据集
+
+# 演绎推理案例
+deductive_reasoning:
+  # 经典三段论
+  syllogisms:
+    - id: "syll_001"
+      major_premise: "所有鸟类都有羽毛"
+      minor_premise: "企鹅是鸟类"
+      conclusion: "企鹅有羽毛"
+      mood_figure: "AAA-1"
+      validity: "valid"
+      difficulty: "easy"
+      categorical_form: "universal_affirmative"
+      logical_structure:
+        major_term: "有羽毛"
+        middle_term: "鸟类"
+        minor_term: "企鹅"
+      cognitive_load: 0.3
+      confidence_score: 0.95
+      
+    - id: "syll_002"
+      major_premise: "没有鱼类能在陆地上呼吸"
+      minor_premise: "鲸鱼是鱼类"
+      conclusion: "鲸鱼不能在陆地上呼吸"
+      validity: "sound"
+      difficulty: "medium"
+      categorical_form: "universal_negative"
+      logical_structure:
+        major_term: "能在陆地上呼吸"
+        middle_term: "鱼类"
+        minor_term: "鲸鱼"
+      cognitive_load: 0.5
+      confidence_score: 0.90
+      
+    - id: "syll_003"
+      major_premise: "有些科学家是左撇子"
+      minor_premise: "左撇子有更好的空间认知能力"
+      conclusion: "有些科学家有更好的空间认知能力"
+      validity: "weak"
+      difficulty: "hard"
+      categorical_form: "particular_affirmative"
+      logical_structure:
+        major_term: "有更好的空间认知能力"
+        middle_term: "左撇子"
+        minor_term: "科学家"
+      cognitive_load: 0.8
+      confidence_score: 0.60
+      fallacy_type: "undistributed_middle"
+      
+  # 条件推理
+  conditional_reasoning:
+    - id: "cond_001"
+      conditional: "如果明天下雨，比赛就会取消"
+      antecedent: "明天下雨"
+      consequent: "比赛取消"
+      inference_type: "modus_ponens"
+      validity: "valid"
+      confidence: 0.95
+      psychological_acceptance: 0.92
+      
+    - id: "cond_002"
+      conditional: "如果明天下雨，比赛就会取消"
+      negation_antecedent: "明天不下雨"
+      conclusion: "比赛不会取消"
+      inference_type: "denying_antecedent"
+      validity: "invalid"
+      confidence: 0.30
+      psychological_acceptance: 0.75  # 常见错误
+      fallacy_type: "affirming_the_consequent"
+      
+    - id: "cond_003"
+      conditional: "如果努力学习，成绩就会提高"
+      affirmation_consequent: "成绩提高了"
+      conclusion: "努力学习"
+      inference_type: "affirming_the_consequent"
+      validity: "invalid"
+      confidence: 0.40
+      psychological_acceptance: 0.65
+      fallacy_type: "denying_the_antecedent"
+      
+    - id: "cond_004"
+      conditional: "如果努力学习，成绩就会提高"
+      negation_consequent: "成绩没有提高"
+      conclusion: "没有努力学习"
+      inference_type: "modus_tollens"
+      validity: "valid"
+      confidence: 0.90
+      psychological_acceptance: 0.85
+      
+  # 选言推理
+  disjunctive_reasoning:
+    - id: "disj_001"
+      premise: "这个数字要么是偶数，要么是奇数"
+      affirmation: "这个数字是偶数"
+      conclusion: "这个数字不是奇数"
+      inference_type: "affirming_a_disjunct"
+      validity: "valid"
+      confidence: 0.98
+      
+    - id: "disj_002"
+      premise: "要么选择A，要么选择B"
+      rejection_a: "不能选择A"
+      conclusion: "必须选择B"
+      inference_type: "denying_a_disjunct"
+      validity: "valid"
+      confidence: 0.95
+
+# 归纳推理案例
+inductive_reasoning:
+  # 简单枚举归纳
+  simple_enumeration:
+    - id: "enum_001"
+      observations:
+        - "观察到天鹅1是白色的"
+        - "观察到天鹅2是白色的"
+        - "观察到天鹅3是白色的"
+        - "观察到天鹅4是白色的"
+      generalization: "所有天鹅都是白色的"
+      strength: "weak"
+      evidence_count: 4
+      counter_examples: ["黑天鹅"]
+      confidence: 0.30
+      typicality: 0.85
+      
+    - id: "enum_002"
+      observations:
+        - "观察到乌鸦1是黑色的"
+        - "观察到乌鸦2是黑色的"
+        - "观察到乌鸦3是黑色的"
+      generalization: "所有乌鸦都是黑色的"
+      strength: "strong"
+      evidence_count: 1000
+      counter_examples: "none_known"
+      confidence: 0.95
+      typicality: 0.99
+      
+  # 科学归纳
+  scientific_induction:
+    - id: "sci_001"
+      phenomenon: "物体下落"
+      observations:
+        - "苹果从树上落下"
+        - "石头从手中落下"
+        - "水滴从天空落下"
+        - "雪花从云中落下"
+      hypothesized_law: "所有物体在重力作用下都会下落"
+      explanatory_power: 0.9
+      testability: "high"
+      confidence: 0.95
+      
+    - id: "sci_002"
+      phenomenon: "植物生长"
+      observations:
+        - "植物需要阳光才能生长"
+        - "植物需要水分才能生长"
+        - "植物需要土壤中的营养"
+      hypothesized_law: "植物生长需要阳光、水分和营养"
+      explanatory_power: 0.8
+      testability: "high"
+      confidence: 0.90
+      
+  # 统计归纳
+  statistical_induction:
+    - id: "stat_001"
+      sample_data:
+        sample_size: 100
+        success_rate: 0.85
+        confidence_level: 0.95
+        margin_of_error: 0.05
+      population_inference: "85% ± 5% 的人会通过测试"
+      reliability: "high"
+      generalizability: "good"
+      
+  # 类比推理
+  analogical_reasoning:
+    - id: "anal_001"
+      source_domain: "太阳系"
+      target_domain: "原子结构"
+      source_structure:
+        - "太阳在中心"
+        - "行星围绕太阳运转"
+        - "不同轨道上的行星"
+      target_structure:
+        - "原子核在中心"
+        - "电子围绕原子核运转"
+        - "不同能级的电子"
+      mapping_quality: 0.8
+      correspondence_strength: "moderate"
+      predictive_power: "limited"
+      historical_impact: "significant"
+      
+    - id: "anal_002"
+      source_domain: "血液循环系统"
+      target_domain: "计算机网络"
+      source_elements:
+        - "心脏作为泵"
+        - "血管作为传输管道"
+        - "血液作为传输介质"
+        - "氧气和营养物质传输"
+      target_elements:
+        - "路由器作为交换中心"
+        - "网络线缆作为传输通道"
+        - "数据包作为传输单位"
+        - "信息和指令传输"
+      mapping_quality: 0.7
+      domain_similarity: "functional"
+      explanatory_value: "moderate"
+
+# 溯因推理案例
+abductive_reasoning:
+  # 最佳解释推理
+  best_explanation:
+    - id: "abdu_001"
+      observation: "草是湿的"
+      candidate_explanations:
+        - explanation: "下雨了"
+          plausibility: 0.9
+          simplicity: 0.8
+          explanatory_power: 0.9
+          testability: "high"
+          
+        - explanation: "有人洒了水"
+          plausibility: 0.6
+          simplicity: 0.9
+          explanatory_power: 0.7
+          testability: "medium"
+          
+        - explanation: "露水凝结"
+          plausibility: 0.7
+          simplicity: 0.8
+          explanatory_power: 0.8
+          testability: "high"
+          
+      best_explanation: "下雨了"
+      reasoning_quality: 0.85
+      context_factors:
+        - time_of_day: "morning"
+        - weather_forecast: "rain_expected"
+        - recent_events: "none"
+        
+    - id: "abdu_002"
+      observation: "街上湿了"
+      explanations:
+        - explanation: "下雨了"
+          evidence_support: 0.8
+          prior_probability: 0.7
+          
+        - explanation: "洒水车经过"
+          evidence_support: 0.3
+          prior_probability: 0.2
+          
+        - explanation: "水管爆裂"
+          evidence_support: 0.1
+          prior_probability: 0.1
+          
+      most_likely_explanation: "下雨了"
+      likelihood_ratio: 0.8 / 0.3
+      
+  # 诊断推理
+  diagnostic_reasoning:
+    - id: "diag_001"
+      symptoms:
+        - symptom: "头痛"
+        intensity: 0.7
+        duration: "2_days"
+        
+        - symptom: "发热"
+        intensity: 0.8
+        duration: "1_day"
+        
+        - symptom: "咳嗽"
+        intensity: 0.6
+        duration: "3_days"
+        
+      possible_causes:
+        - cause: "普通感冒"
+        symptom_match: 0.9
+        likelihood: 0.6
+        supporting_evidence: ["症状组合典型"]
+        
+        - cause: "流感"
+        symptom_match: 0.8
+        likelihood: 0.3
+        supporting_evidence: ["发热较重"]
+        
+        - cause: "过敏反应"
+        symptom_match: 0.5
+        likelihood: 0.1
+        supporting_evidence: ["无过敏史"]
+        
+      diagnosis: "普通感冒"
+      confidence: 0.75
+      differential_diagnosis: ["普通感冒", "流感"]
+      
+  # 因果推理
+  causal_reasoning:
+    - id: "caus_001"
+      effect: "交通事故增加"
+      potential_causes:
+        - cause: "恶劣天气"
+        evidence_strength: 0.8
+        temporal_precedence: true
+        dose_response: true
+        mechanism: "能见度降低，路面湿滑"
+        
+        - cause: "司机疲劳"
+        evidence_strength: 0.6
+        temporal_precedence: true
+        dose_response: false
+        mechanism: "反应时间延长"
+        
+        - cause: "新车增多"
+        evidence_strength: 0.4
+        temporal_precedence: true
+        dose_response: false
+        mechanism: "驾驶技能不熟练"
+        
+      most_likely_cause: "恶劣天气"
+      causal_strength: 0.8
+      
+  # 反事实推理
+  counterfactual_reasoning:
+    - id: "count_001"
+      actual_scenario: "选择了方案A，导致项目失败"
+      counterfactual: "如果选择了方案B，项目会成功吗？"
+      analysis:
+        - alternative_outcome: "项目可能成功"
+        probability: 0.7
+        reasoning: "方案B有更高的成功概率"
+        
+        - alternative_outcome: "仍然失败"
+        probability: 0.3
+        reasoning: "失败的根本原因可能相同"
+        
+      causal_attribution: "choice_was_critical"
+      confidence: 0.65
+
+# 复合推理案例
+composite_reasoning:
+  # 连锁推理
+  chained_reasoning:
+    - id: "chain_001"
+      premises:
+        - "所有学生都通过了考试"
+        - "通过考试的学生都能毕业"
+        - "能毕业的学生都能找到工作"
+      conclusion_chain:
+        intermediate: "所有学生都能毕业"
+        final: "所有学生都能找到工作"
+      validity: "valid"
+      length: 3
+      cognitive_load: 0.6
+      
+  # 并行推理
+  parallel_reasoning:
+    - id: "para_001"
+      conclusion_target: "这个人很有逻辑思维能力"
+      evidence_sources:
+        - evidence: "在逻辑谜题中表现出色"
+        weight: 0.3
+        reliability: "high"
+        
+        - evidence: "数学成绩优异"
+        weight: 0.25
+        reliability: "high"
+        
+        - evidence: "编程能力强"
+        weight: 0.25
+        reliability: "medium"
+        
+        - evidence: "辩论中逻辑清晰"
+        weight: 0.2
+        reliability: "medium"
+      aggregate_strength: 0.75
+      
+  # 归纳-演绎组合
+  inductive_deductive:
+    - id: "induct_deduct_001"
+      inductive_phase:
+        observations: ["乌鸦1是黑的", "乌鸦2是黑的", "乌鸦3是黑的"]
+        generalization: "所有乌鸦都是黑的"
+        confidence: 0.95
+        
+      deductive_phase:
+        premise: "所有乌鸦都是黑的"
+        instance: "这是一只乌鸦"
+        conclusion: "这只乌鸦是黑的"
+        validity: "valid"
+        
+      overall_validity: "strong"
+      
+  # 多步复杂推理
+  multi_step_reasoning:
+    - id: "multi_001"
+      problem: "确定最佳的投资策略"
+      reasoning_steps:
+        - step: "分析当前市场状况"
+        input: "市场数据和趋势"
+        output: "市场评估"
+        confidence: 0.8
+        
+        - step: "评估风险承受能力"
+        input: "个人财务状况"
+        output: "风险等级"
+        confidence: 0.9
+        
+        - step: "匹配投资选项"
+        input: ["市场评估", "风险等级"]
+        output: "候选策略"
+        confidence: 0.75
+        
+        - step: "选择最优策略"
+        input: "候选策略"
+        output: "最终决策"
+        confidence: 0.85
+        
+      total_confidence: 0.65
+      cognitive_load: 0.9
+
+# 推理能力评估基准
+reasoning_benchmarks:
+  human_performance:
+    deductive_reasoning:
+      syllogistic_accuracy: 0.85
+      conditional_accuracy: 0.75
+      average_response_time: 3.5  # seconds
+      
+    inductive_reasoning:
+      pattern_recognition_accuracy: 0.80
+      generalization_strength: 0.70
+      bias_resistance: 0.60
+      
+    abductive_reasoning:
+      best_explanation_accuracy: 0.70
+      diagnostic_accuracy: 0.75
+      causal_inference_quality: 0.65
+      
+  cognitive_load_factors:
+    premise_complexity:
+      simple: {"load": 0.2, "accuracy_impact": 0.0}
+      medium: {"load": 0.5, "accuracy_impact": -0.1}
+      complex: {"load": 0.8, "accuracy_impact": -0.3}
+      
+    inference_type_difficulty:
+      modus_ponens: {"difficulty": 0.2, "error_rate": 0.05}
+      modus_tollens: {"difficulty": 0.6, "error_rate": 0.25}
+      denying_antecedent: {"difficulty": 0.4, "error_rate": 0.40}
+      affirming_consequent: {"difficulty": 0.5, "error_rate": 0.35}
+      
+  age_related_decline:
+    young_adults: {"accuracy": 0.85, "speed": "fast"}
+    middle_aged: {"accuracy": 0.80, "speed": "medium"}
+    older_adults: {"accuracy": 0.70, "speed": "slow"

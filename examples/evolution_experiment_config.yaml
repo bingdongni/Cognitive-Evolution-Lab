@@ -1,0 +1,424 @@
+# Cognitive Evolution Lab - 协同进化实验配置
+# 作者: bingdongni
+# 此配置专门用于协同进化和多智能体研究实验
+
+# 全局设置
+global:
+  version: "1.0.0"
+  debug: false
+  log_level: "INFO"
+  save_path: "./evolution_results"
+  random_seed: 42
+  device: "auto"
+
+# 认知模型配置 - 进化支持
+cognitive_models:
+  # 记忆系统 - 进化记忆
+  memory:
+    type: "evolutionary_memory"
+    capacity: 10000
+    episodic_weight: 0.35
+    semantic_weight: 0.35
+    procedural_weight: 0.3
+    genetic_memory: true       # 遗传记忆
+    
+  # 注意力机制 - 群体注意
+  attention:
+    type: "collective_attention"
+    dimensions: 512
+    heads: 8
+    dropout: 0.1
+    social_attention: true     # 社会注意
+    group_coherence: 0.7       # 群体一致性
+    
+  # 推理系统 - 协同推理
+  reasoning:
+    type: "collective_reasoning"
+    symbolic_ratio: 0.4
+    neural_ratio: 0.6
+    logic_depth: 5
+    knowledge_graph: "distributed"  # 分布式知识图
+    collective_intelligence: true   # 集体智能
+    
+  # 学习机制 - 进化学习
+  learning:
+    type: "evolutionary_learning"
+    adaptation_rate: 0.01
+    consolidation_rate: 0.001
+    lifelong_learning: true
+    evolutionary_learning: true    # 进化学习
+    cultural_transmission: 0.8     # 文化传播
+    
+  # 创造力模块 - 群体创造力
+  creativity:
+    divergent_thinking: true
+    convergent_thinking: true
+    novelty_threshold: 0.7
+    aesthetic_score: true
+    collective_creativity: true    # 群体创造力
+    ideation_synergy: 0.8          # 创意协同效应
+    
+  # 观察力模块 - 社会观察
+  observation:
+    multi_scale: true
+    pattern_recognition: true
+    anomaly_detection: true
+    temporal_analysis: true
+    social_observation: true       # 社会观察
+    group_behavior_analysis: true  # 群体行为分析
+
+# 世界模拟器配置 - 进化环境
+world_simulator:
+  # 物理世界 - 进化生态
+  physics_engine: "evolution_physics"
+  gravity: 9.81
+  timestep: 0.001
+  max_objects: 1000
+  environmental_pressure: true     # 环境压力
+  resource_competition: true       # 资源竞争
+  
+  # 社会世界 - 群体动态
+  social_agents: 100              # 大规模群体
+  interaction_radius: 20.0
+  cooperation_factor: 0.7
+  competition_factor: 0.5         # 竞争因子
+  social_network: true            # 社交网络
+  communication_protocols: ["direct", "broadcast", "relay"]
+  
+  # 游戏世界 - 进化挑战
+  game_environments: ["survival", "cooperation", "competition", "resource_management"]
+  unity_agents: false
+  ml_agents_path: "./ml-agents"
+  
+  # 现实数据集成 - 进化模拟
+  real_data_sources:
+    stock_data: true              # 经济系统模拟
+    social_media: true            # 社会动态
+    weather: true                 # 环境变化
+    news_feeds: true              # 信息传播
+    
+  # 进化环境参数
+  evolutionary_environments:
+    - name: "resource_rich"
+      resources: "abundant"
+      competition: "low"
+      cooperation_opportunities: "high"
+      
+    - name: "resource_poor"
+      resources: "scarce"
+      competition: "high"
+      cooperation_necessity: "high"
+      
+    - name: "changing_environment"
+      dynamics: "high"
+      adaptation_pressure: "high"
+      learning_opportunities: "abundant"
+
+# 交互系统配置 - 群体交互
+interactive_systems:
+  # 具身智能 - 群体智能体
+  embodied_intelligence:
+    body_model: "social_agent"
+    motor_control: "collective"
+    sensory_fusion: "group_aware"
+    balance_control: true
+    social_behavior: true         # 社会行为
+    
+  # 多模态感知 - 群体感知
+  multimodal_perception:
+    vision:
+      enabled: true
+      resolution: [224, 224]
+      model: "social_vision"
+      crowd_analysis: true        # 人群分析
+      group_dynamics: true        # 群体动态
+      
+    audio:
+      enabled: true
+      sample_rate: 16000
+      model: "social_audio"
+      voice_recognition: true     # 声音识别
+      group_communication: true   # 群体通信
+      
+    touch:
+      enabled: true
+      sensor_count: 100
+      sensitivity: 0.8
+      physical_cooperation: true  # 物理协作
+      
+    text:
+      enabled: true
+      model: "social_language"
+      sentiment_analysis: true    # 情感分析
+      group_sentiment: true       # 群体情感
+      
+  # 动作规划 - 群体协调
+  action_planning:
+    horizon: 20                   # 更长时间视野
+    replanning_rate: 0.05
+    uncertainty_handling: "group_consensus"
+    safety_constraints: true
+    collective_action: true       # 集体行动
+
+# 进化引擎配置 - 完整进化系统
+evolution_engine:
+  # 遗传算法 - 高级版本
+  genetic:
+    population_size: 100
+    mutation_rate: 0.1
+    crossover_rate: 0.8
+    elitism_rate: 0.15
+    
+    # 高级遗传算子
+    advanced_operators:
+      - name: "uniform_crossover"
+        probability: 0.3
+        
+      - name: "blend_crossover"
+        probability: 0.3
+        
+      - name: "gaussian_mutation"
+        probability: 0.1
+        
+      - name: "polynomial_mutation"
+        probability: 0.1
+        
+    # 选择策略
+    selection_strategies:
+      - name: "tournament"
+        size: 5
+        probability: 0.4
+        
+      - name: "roulette_wheel"
+        probability: 0.3
+        
+      - name: "rank_based"
+        probability: 0.3
+    
+  # 多智能体进化 - 群体智能
+  multi_agent:
+    cooperation_threshold: 0.7
+    competition_weight: 0.4      # 平衡竞争与合作
+    communication_enabled: true
+    coalition_formation: true
+    emergent_behaviors: true     # 涌现行为
+    collective_intelligence: true # 集体智能
+    
+    # 群体动态
+    group_dynamics:
+      size_distribution: "normal"
+      leadership_emergence: true
+      role_specialization: true
+      social_learning: true
+      
+    # 协作机制
+    cooperation_mechanisms:
+      - name: "mutual_aid"
+        strength: 0.8
+        
+      - name: "resource_sharing"
+        threshold: 0.5
+        
+      - name: "knowledge_transfer"
+        efficiency: 0.7
+        
+      - name: "joint_planning"
+        complexity: 0.6
+    
+  # 知识进化 - 文化进化
+  knowledge_evolution:
+    retention_rate: 0.95
+    forgetting_rate: 0.05
+    transfer_learning: true
+    knowledge_distillation: true
+    cultural_evolution: true      # 文化进化
+    memetic_evolution: true       # 模因进化
+    
+    # 文化传播模式
+    cultural_transmission:
+      vertical: 0.3              # 垂直传播
+      horizontal: 0.4            # 水平传播
+      oblique: 0.3               # 斜向传播
+      
+    # 文化适应
+    cultural_adaptation:
+      innovation_rate: 0.1
+      convergence_rate: 0.05
+      diversity_maintenance: 0.3
+    
+  # 环境共演化 - 生态进化
+  co_evolution:
+    adaptation_rate: 0.01
+    complexity_growth: 0.05
+    difficulty_scaling: true
+    environmental_feedback: true # 环境反馈
+    
+    # 共演化模式
+    co_evolution_modes:
+      - name: "predator_prey"
+        dynamics: "oscillatory"
+        
+      - name: "competitive_exclusion"
+        dynamics: "alternative"
+        
+      - name: "mutualism"
+        dynamics: "synergistic"
+        
+      - name: "commensalism"
+        dynamics: "neutral"
+    
+    # 环境变化
+    environmental_dynamics:
+      seasonal_changes: true
+      catastrophic_events: true
+      gradual_change: true
+      punctuated_equilibrium: true
+
+# 可视化配置 - 进化监控
+visualization:
+  # 3D渲染 - 群体可视化
+  render_3d:
+    enabled: true
+    engine: "evolution_renderer"
+    resolution: [1920, 1080]
+    fps: 60
+    lighting: true
+    shadows: true
+    particle_systems: true
+    group_visualization: true    # 群体可视化
+    
+  # 数据仪表板 - 进化监控
+  dashboard:
+    framework: "evolution_dash"
+    refresh_rate: 0.5           # 高刷新率
+    charts: ["evolution_tree", "phylogenetic", "network", "fitness_landscape", "population_dynamics"]
+    
+  # 实时监控 - 全面监控
+  monitoring:
+    brain_activity: true
+    learning_curves: true
+    evolution_progress: true
+    environment_state: true
+    population_dynamics: true    # 群体动态
+    genetic_diversity: true      # 遗传多样性
+    cultural_evolution: true     # 文化进化
+
+# 实验配置 - 进化实验
+experiments:
+  # 认知能力测试 - 进化版本
+  cognitive_tests:
+    memory_tests: ["episodic", "semantic", "procedural", "genetic"]
+    reasoning_tests: ["deductive", "inductive", "abductive", "collective"]
+    creativity_tests: ["individual", "collective", "collaborative"]
+    observation_tests: ["individual", "social", "environmental"]
+    attention_tests: ["individual", "social", "environmental"]
+    imagination_tests: ["individual", "collective", "future_scenarios"]
+    
+  # 进化实验 - 完整版本
+  evolution_experiments:
+    single_agent_evolution: true
+    multi_agent_evolution: true
+    co_evolution: true
+    cultural_evolution: true
+    memetic_evolution: true      # 模因进化
+    ecological_evolution: true   # 生态进化
+    
+  # 比较基准 - 进化基准
+  benchmarks:
+    include_traditional_ai: true
+    include_human_performance: true
+    include_evolutionary_algorithms: true
+
+# 进化实验设计
+evolution_experiments:
+  # 单智能体进化实验
+  single_agent_experiments:
+    - name: "trait_evolution"
+      generations: 200
+      selection_pressure: 0.7
+      mutation_strength: 0.1
+      
+    - name: "learning_evolution"
+      generations: 150
+      learning_integration: true
+      cultural_transmission: false
+      
+  # 多智能体进化实验
+  multi_agent_experiments:
+    - name: "cooperation_evolution"
+      population_size: 50
+      cooperation_cost: 0.1
+      cooperation_benefit: 0.3
+      
+    - name: "competition_evolution"
+      population_size: 50
+      competition_intensity: 0.8
+      resource_competition: true
+      
+    - name: "communication_evolution"
+      population_size: 30
+      communication_cost: 0.05
+      communication_benefit: 0.2
+      
+  # 共演化实验
+  co_evolution_experiments:
+    - name: "species_coevolution"
+      species_count: 3
+      interaction_matrix: [[0, 1, -1], [1, 0, -1], [-1, -1, 0]]
+      
+    - name: "host_parasite_coevolution"
+      host_adaptation_rate: 0.01
+      parasite_adaptation_rate: 0.05
+      
+  # 文化进化实验
+  cultural_experiments:
+    - name: "idea_evolution"
+      innovation_rate: 0.1
+      imitation_rate: 0.7
+      selection_fitness: true
+      
+    - name: "technology_evolution"
+      complexity_growth: true
+      compatibility_selection: true
+
+# 性能配置 - 进化优化
+performance:
+  # 并行计算 - 进化加速
+  parallel_processing:
+    cpu_cores: "auto"
+    gpu_devices: "auto"
+    distributed: true            # 分布式计算
+    
+  # 内存管理 - 进化缓存
+  memory_management:
+    cache_size: "4GB"
+    garbage_collection: true
+    memory_monitoring: true
+    
+  # 存储优化 - 进化数据
+  storage:
+    model_checkpointing: true
+    data_compression: true
+    auto_save_interval: 900     # 15分钟
+    genetic_archive: true       # 遗传档案
+
+# 调试配置 - 进化调试
+debug:
+  detailed_logging: false
+  performance_profiling: true   # 性能分析
+  memory_profiling: true        # 内存分析
+  visualization_debug: false
+  save_intermediate_results: true
+  evolution_logging: true       # 进化日志
+  population_snapshots: true    # 种群快照
+
+# 安全配置 - 进化保护
+security:
+  sandbox_environment: true
+  resource_limits:
+    cpu_time: 7200  # 2小时
+    memory: "8GB"
+    disk_space: "10GB"
+  input_validation: true
+  output_sanitization: true
+  evolution_monitoring: true    # 进化监控

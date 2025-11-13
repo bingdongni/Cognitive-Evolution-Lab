@@ -1,0 +1,540 @@
+# 创造力任务和示例数据
+# 作者: bingdongni
+# 用于评估和训练创造性思维能力的任务和标准
+
+# 发散思维任务
+divergent_thinking_tasks:
+  # 替代用途测试 (Alternate Uses Test - AUT)
+  alternate_uses_tasks:
+    - id: "aut_001"
+      stimulus_object: "砖头"
+      original_function: "建筑材料"
+      time_limit: 120  # seconds
+      evaluation_criteria:
+        - name: "fluency"
+          description: "生成想法的数量"
+          weight: 0.25
+          scoring_range: [0, 10]
+          
+        - name: "flexibility"
+          description: "想法类别多样性"
+          weight: 0.25
+          scoring_range: [0, 10]
+          
+        - name: "originality"
+          description: "想法的新颖程度"
+          weight: 0.30
+          scoring_range: [0, 10]
+          
+        - name: "elaboration"
+          description: "想法的详细程度"
+          weight: 0.20
+          scoring_range: [0, 10]
+          
+      sample_responses:
+        - idea: "用砖头制作艺术品"
+          category: "艺术用途"
+          originality: 8
+          feasibility: 7
+          usefulness: 6
+          detail_level: 7
+          
+        - idea: "作为门挡使用"
+          category: "实用工具"
+          originality: 4
+          feasibility: 9
+          usefulness: 8
+          detail_level: 5
+          
+        - idea: "制作一个简单的台灯底座"
+          category: "装饰用品"
+          originality: 6
+          feasibility: 8
+          usefulness: 7
+          detail_level: 6
+          
+        - idea: "用于练习投掷技巧"
+          category: "体育用品"
+          originality: 3
+          feasibility: 9
+          usefulness: 5
+          detail_level: 4
+          
+      scoring_weights:
+        fluency: 1.0
+        flexibility: 1.5
+        originality: 2.0
+        elaboration: 0.5
+        
+    - id: "aut_002"
+      stimulus_object: "回形针"
+      original_function: "文件整理"
+      time_limit: 90
+      evaluation_criteria:
+        - name: "creative_combination"
+          description: "组合使用的创新程度"
+          weight: 0.4
+          
+        - name: "functional_extension"
+          description: "功能扩展的合理性"
+          weight: 0.3
+          
+        - name: "surprise_value"
+          description: "想法的意外性"
+          weight: 0.3
+          
+      sample_responses:
+        - idea: "制作简单的电路连接器"
+          category: "电子配件"
+          surprise: 8
+          feasibility: 7
+          innovation_score: 8
+          
+        - idea: "作为临时拉链拉头"
+          category: "服装配件"
+          surprise: 6
+          feasibility: 8
+          innovation_score: 6
+          
+        - idea: "制作迷你园艺工具"
+          category: "园艺用品"
+          surprise: 7
+          feasibility: 6
+          innovation_score: 7
+          
+  # 后果测试 (Consequences Test)
+  consequences_tasks:
+    - id: "cons_001"
+      hypothetical_scenario: "如果重力突然消失一年"
+      evaluation_dimensions:
+        - name: "quantity"
+          description: "生成后果的数量"
+          weight: 0.3
+          
+        - name: "remoteness"
+          description: "后果的深远程度"
+          weight: 0.4
+          
+        - name: "originality"
+          description: "后果的创新程度"
+          weight: 0.3
+          
+      sample_consequences:
+        - consequence: "所有物体开始漂浮"
+          remoteness: 5
+          originality: 6
+          feasibility: 10
+          detailed_explanation: "没有重力约束，所有物体将按惯性运动"
+          
+        - consequence: "人类需要重新设计生活空间"
+        remoteness: 8
+        originality: 7
+        feasibility: 8
+        detailed_explanation: "建筑结构、交通工具、生活用品都需要适配无重力环境"
+        
+        - consequence: "海洋和大气层会飘散到太空中"
+        remoteness: 9
+        originality: 8
+        feasibility: 9
+        detailed_explanation: "地球的引力是维持大气层和海洋的主要力量"
+        
+        - consequence: "时间感知会发生变化"
+        remoteness: 7
+        originality: 9
+        feasibility: 6
+        detailed_explanation: "失去参照系可能导致人类对时间和空间的认知改变"
+        
+  # 情境反应测试
+  situation_response_tasks:
+    - id: "sit_001"
+      situation: "你被困在一个孤岛上，只能带三样东西"
+      constraints:
+        - "必须能帮助你生存"
+        - "必须能让你保持心理健康"
+        - "不能是明显的生存必需品"
+      response_evaluation:
+        - name: "practicality"
+          description: "实用性评估"
+          weight: 0.25
+          
+        - name: "psychological_benefit"
+          description: "心理健康价值"
+          weight: 0.35
+          
+        - name: "innovation"
+          description: "选择的创新性"
+          weight: 0.40
+          
+      sample_responses:
+        - items: ["日记本和笔", "音乐播放器", "小型植物种子"]
+          innovation_score: 8
+          psychological_value: 9
+          survival_benefit: 7
+          overall_score: 8
+          
+        - items: ["画笔和颜料", "镜子", "望远镜"]
+          innovation_score: 9
+          psychological_value: 8
+          survival_benefit: 8
+          overall_score: 8.3
+
+# 收敛思维任务
+convergent_thinking_tasks:
+  # 远程联想测试 (Remote Associates Test - RAT)
+  remote_associates_tasks:
+    - id: "rat_001"
+      problem_type: "word_triple"
+      target_words: ["时间", "纸", "飞"]
+      correct_associate: "浪费"
+      solution_path:
+        - "时间的浪费"
+        - "纸张浪费"
+        - "浪费飞行"
+      difficulty_level: "medium"
+      time_limit: 30
+      
+      - id: "rat_002"
+      problem_type: "word_triple"
+      target_words: ["牙齿", "生日", "月亮"]
+      correct_associate: "满"
+      solution_path:
+        - "牙齿长满"
+        - "生日圆满"
+        - "月亮满月"
+      difficulty_level: "hard"
+      time_limit: 45
+      
+      - id: "rat_003"
+      problem_type: "word_triple"
+      target_words: ["运动", "鞋", "讲话"]
+      correct_associate: "慢"
+      solution_path:
+        - "慢运动"
+        - "慢跑鞋"
+        - "慢讲话"
+      difficulty_level: "easy"
+      time_limit: 20
+      
+  # 洞察问题
+  insight_problems:
+    - id: "insight_001"
+      problem_statement: |
+        一个商人有15袋金币，每袋里有10枚金币。
+        其中一袋是假币，真金币每枚重10克，假金币每枚重9克。
+        给你一个秤，只称一次，如何找出假币袋？
+        
+      solution: "从第1袋取1枚，第2袋取2枚，第3袋取3枚...第15袋取15枚，总共取120枚一起称"
+      expected_weight: "1190克 (如果是120枚真币)"
+      deficit_克数: "指出假币袋数"
+      
+      cognitive_processes:
+        - "problem_restructuring"
+        - "constraint_analysis"
+        - "analogical_transfer"
+        
+      solution_time_distribution:
+        - time_range: "< 1分钟"
+          percentage: 20
+          
+        - time_range: "1-5分钟"
+          percentage: 40
+          
+        - time_range: "5-15分钟"
+        percentage: 25
+        
+        - time_range: "> 15分钟"
+        percentage: 15
+        
+    - id: "insight_002"
+      problem_statement: |
+        有两个水桶，一个能装5升水，一个能装3升水。
+        如何用这两个桶准确测量出4升水？
+        
+      solution: |
+        1. 装满5升桶
+        2. 从5升桶倒水到3升桶（5升桶剩2升）
+        3. 倒空3升桶
+        4. 将5升桶中的2升倒入3升桶
+        5. 装满5升桶
+        6. 从5升桶倒水到3升桶至满（倒入1升，5升桶剩4升）
+        
+      problem_type: "water_jug"
+      cognitive_difficulty: "medium"
+      
+    - id: "insight_003"
+      problem_statement: |
+        一个农夫有17只羊，除了一般的死法外死了9只，
+        还剩多少只羊？
+        
+      solution: "17只"
+      cognitive_trap: "数学运算vs语言理解"
+      insight_required: "理解'除了一般的死法外死了9只'意味着还剩9只"
+      common_mistake: "17-9=8"
+
+# 创意问题解决任务
+creative_problem_solving:
+  # 设计挑战
+  design_challenges:
+    - id: "design_001"
+      challenge_title: "为老年人设计智能家居助手"
+      target_users: "65岁以上老年人"
+      constraints:
+        - "操作必须极其简单"
+        - "成本控制在合理范围"
+        - "必须考虑安全和隐私"
+        - "适应不同技术熟练度"
+        
+      success_criteria:
+        - name: "user_friendly"
+          weight: 0.3
+          description: "用户友好程度"
+          
+        - name: "feasibility"
+          weight: 0.25
+          description: "技术可行性"
+          
+        - name: "innovation"
+          weight: 0.25
+          description: "创新程度"
+          
+        - name: "market_potential"
+          weight: 0.2
+          description: "市场潜力"
+          
+      evaluation_rubric:
+        excellent: {"score_range": [9, 10], "description": "全面满足所有标准"}
+        good: {"score_range": [7, 8], "description": "满足大部分标准"}
+        adequate: {"score_range": [5, 6], "description": "满足基本要求"}
+        poor: {"score_range": [1, 4], "description": "不满足基本要求"}
+        
+      sample_solutions:
+        - title: "语音激活的全屋助手"
+          description: "通过简单的语音指令控制所有设备"
+          innovation_score: 8
+          feasibility_score: 7
+          user_friendly_score: 9
+          cost_estimate: "中等"
+          key_features:
+            - "大按钮物理控制面板作为备选"
+            - "紧急呼叫功能"
+            - "健康监测集成"
+            - "简化的语音识别"
+            
+        - title: "磁吸式智能控制面板"
+        description: "将控制面板做成可拆卸的，贴在需要的位置"
+        innovation_score: 9
+        feasibility_score: 8
+        user_friendly_score: 8
+        cost_estimate: "中高"
+        key_features:
+          - "物理大按钮"
+          - "视觉反馈明确"
+          - "位置可调"
+          - "一键紧急功能"
+          
+  # 跨域创新任务
+  cross_domain_innovation:
+    - id: "cross_domain_001"
+      source_domain: "自然界"
+      target_domain: "人工智能"
+      challenge: "从自然界获得灵感，改进AI学习算法"
+      
+      nature_inspiration_tasks:
+        - inspiration: "蜜蜂的群体智慧"
+          ai_application: "分布式机器学习算法"
+          innovation_potential: 8
+          implementation_difficulty: 6
+          
+        - inspiration: "神经可塑性"
+          ai_application: "动态神经网络架构"
+          innovation_potential: 9
+          implementation_difficulty: 8
+          
+        - inspiration: "免疫系统学习"
+          ai_application: "异常检测算法"
+          innovation_potential: 7
+          implementation_difficulty: 5
+          
+      evaluation_criteria:
+        - name: "biological_accuracy"
+          weight: 0.25
+          description: "生物学原理的准确性"
+          
+        - name: "technological_relevance"
+          weight: 0.35
+          description: "技术相关的适用性"
+          
+        - name: "innovation_level"
+          weight: 0.25
+          description: "创新的突破性"
+          
+        - name: "implementation_feasibility"
+          weight: 0.15
+          description: "实现的可能性"
+          
+  # 约束创新任务
+  constraint_innovation:
+    - id: "constraint_001"
+      challenge_title: "用100元预算解决城市交通问题"
+      constraints:
+        - "总预算100元"
+        - "不能购买物理设备"
+        - "必须对现有基础设施有效"
+        - "解决方案必须可持续"
+        
+      solution_evaluation:
+        - name: "creativity"
+          weight: 0.3
+          description: "创意思维的独特性"
+          
+        - name: "practicality"
+          weight: 0.3
+          description: "实际可行性"
+          
+        - name: "impact"
+          weight: 0.25
+          description: "预期影响范围"
+          
+        - name: "sustainability"
+          weight: 0.15
+          description: "可持续性"
+          
+      sample_approaches:
+        - approach: "设计一个手机应用，利用拼车软件促进拼车"
+          cost: "应用开发工具免费版本"
+          creativity_score: 7
+          impact_potential: 8
+          implementation_time: "2周"
+          
+        - approach: "创建一个在线平台，连接通勤者和非正式司机"
+        cost: "网站托管费用"
+        creativity_score: 8
+        impact_potential: 7
+        implementation_time: "1周"
+        
+# 协作创意任务
+collaborative_creativity:
+  # 头脑风暴规则
+  brainstorming_protocols:
+    - id: "brainstorm_001"
+      protocol_name: "传统头脑风暴"
+      rules:
+        - "追求数量而非质量"
+        - "不要过早批判任何想法"
+        - "欢迎异想天开的想法"
+        - "在他人想法基础上发展"
+      group_size: "5-8人"
+      duration: "30-60分钟"
+      facilitator_role: "记录想法，促进参与"
+      
+    - id: "brainstorm_002"
+      protocol_name: "六顶思考帽"
+      rules:
+        - "白色帽子：纯粹关注事实和数据"
+        - "红色帽子：关注情感和直觉"
+        - "黑色帽子：关注风险和缺点"
+        - "黄色帽子：关注优点和价值"
+        - "绿色帽子：关注创意和可能性"
+        - "蓝色帽子：控制整个思考过程"
+      group_size: "3-6人"
+      duration: "45-90分钟"
+      complexity: "中高"
+      
+  # 创意评估标准
+  creativity_metrics:
+    cognitive_measures:
+      - name: "torrance_creativity_score"
+        components:
+          - name: "fluency"
+            description: "产生想法的数量"
+            weight: 0.25
+            
+          - name: "flexibility"
+            description: "思维转移的流畅性"
+            weight: 0.25
+            
+          - name: "originality"
+            description: "想法的新颖程度"
+            weight: 0.30
+            
+          - name: "elaboration"
+            description: "想法的详细和具体程度"
+            weight: 0.20
+            
+      - name: "guilford_divergent_production"
+        dimensions:
+          - "语义丰富性"
+          - "语义流畅性"
+          - "语义灵活性"
+          - "语义独创性"
+          
+    expert_judging:
+      judging_criteria:
+        - name: "novelty"
+          description: "解决方案的新颖程度"
+          rating_scale: [1, 7]
+          
+        - name: "appropriateness"
+          description: "解决方案的适用性"
+          rating_scale: [1, 7]
+          
+        - name: "elegance"
+          description: "解决方案的优雅程度"
+          rating_scale: [1, 7]
+          
+        - name: "impact"
+          description: "解决方案的潜在影响"
+          rating_scale: [1, 7]
+          
+      inter_rater_reliability: 0.85
+      expert_backgrounds: ["领域专家", "创意专家", "用户代表"]
+
+# 创意能力基准
+creativity_benchmarks:
+  human_baselines:
+    demographic_groups:
+      children_6_10:
+        fluency_mean: 12.5
+        flexibility_mean: 8.3
+        originality_mean: 6.7
+        elaboration_mean: 4.2
+        
+      adolescents_13_17:
+        fluency_mean: 15.2
+        flexibility_mean: 10.1
+        originality_mean: 7.8
+        elaboration_mean: 5.9
+        
+      adults_25_35:
+        fluency_mean: 14.8
+        flexibility_mean: 9.6
+        originality_mean: 8.2
+        elaboration_mean: 6.5
+        
+      adults_50_65:
+        fluency_mean: 12.1
+        flexibility_mean: 8.9
+        originality_mean: 7.5
+        elaboration_mean: 7.1
+        
+  domain_specific_creativity:
+    scientific_creativity:
+      innovative_discoveries_per_decade: 50
+      breakthrough_threshold: "paradigm_shift"
+      evaluation_timeframe: "10-20年"
+      
+    artistic_creativity:
+      aesthetic_appreciation_subjective: true
+      cultural_dependence: true
+      historical_context_importance: "high"
+      
+    everyday_creativity:
+      problem_solving_frequency: "daily"
+      innovation_magnitude: "small_to_medium"
+      practical_impact: "immediate"
+      
+  cognitive_correlates:
+    intelligence_creativity_correlation: 0.3
+    openness_experience_correlation: 0.6
+    working_memory_flexibility: "moderate_negative"
+    default_mode_network_creativity: "enhanced_connectivity"

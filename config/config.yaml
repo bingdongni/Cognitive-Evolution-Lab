@@ -1,0 +1,240 @@
+# Cognitive Evolution Lab - 主配置文件
+# 作者: bingdongni
+
+# 全局设置
+global:
+  version: "1.0.0"
+  debug: false
+  log_level: "INFO"
+  save_path: "./results"
+  random_seed: 42
+  device: "auto"  # auto, cpu, cuda
+
+# 外部世界模拟器配置
+world_simulator:
+  # 物理世界设置
+  physics_engine: "bullet"
+  gravity: 9.81
+  timestep: 0.001
+  max_objects: 1000
+  
+  # 社会世界设置
+  social_agents: 50
+  interaction_radius: 10.0
+  cooperation_factor: 0.7
+  
+  # 游戏世界设置
+  game_environments: ["CartPole", "Pong", "AtariBreakout"]
+  unity_agents: false
+  ml_agents_path: "./ml-agents"
+  
+  # 现实数据集成
+  real_data_sources:
+    stock_data: true
+    social_media: false
+    weather: false
+    news_feeds: false
+  
+  # 环境参数
+  environment_size: [100, 100, 50]
+  visual_render: true
+  physics_render: true
+  particle_systems: true
+
+# 内部心智模型配置
+cognitive_models:
+  # 记忆系统
+  memory:
+    type: "hierarchical"
+    capacity: 10000
+    episodic_weight: 0.3
+    semantic_weight: 0.5
+    procedural_weight: 0.2
+    
+  # 注意力机制
+  attention:
+    type: "transformer"
+    heads: 8
+    dimensions: 512
+    dropout: 0.1
+    dynamic_allocation: true
+    
+  # 推理系统
+  reasoning:
+    type: "neuro_symbolic"
+    symbolic_ratio: 0.4
+    neural_ratio: 0.6
+    logic_depth: 5
+    knowledge_graph: "conceptnet"
+    
+  # 学习机制
+  learning:
+    type: "meta_learning"
+    adaptation_rate: 0.01
+    consolidation_rate: 0.001
+    lifelong_learning: true
+    
+  # 创造力模块
+  creativity:
+    divergent_thinking: true
+    convergent_thinking: true
+    novelty_threshold: 0.7
+    aesthetic_score: true
+    
+  # 观察力模块
+  observation:
+    multi_scale: true
+    pattern_recognition: true
+    anomaly_detection: true
+    temporal_analysis: true
+
+# 交互行动系统配置
+interactive_systems:
+  # 具身智能
+  embodied_intelligence:
+    body_model: "humanoid"
+    motor_control: "policy_gradient"
+    sensory_fusion: "kalman_filter"
+    balance_control: true
+    
+  # 多模态感知
+  multimodal_perception:
+    vision:
+      enabled: true
+      resolution: [224, 224]
+      model: "resnet50"
+      
+    audio:
+      enabled: true
+      sample_rate: 16000
+      model: "wav2vec2"
+      
+    touch:
+      enabled: true
+      sensor_count: 100
+      sensitivity: 0.8
+      
+    text:
+      enabled: true
+      model: "bert-base"
+      
+  # 动作规划
+  action_planning:
+    horizon: 10
+    replanning_rate: 0.1
+    uncertainty_handling: "monte_carlo"
+    safety_constraints: true
+
+# 协同进化引擎配置
+evolution_engine:
+  # 遗传算法
+  genetic:
+    population_size: 100
+    mutation_rate: 0.1
+    crossover_rate: 0.8
+    elitism_rate: 0.1
+    
+  # 多智能体进化
+  multi_agent:
+    cooperation_threshold: 0.7
+    competition_weight: 0.3
+    communication_enabled: true
+    coalition_formation: true
+    
+  # 知识进化
+  knowledge_evolution:
+    retention_rate: 0.95
+    forgetting_rate: 0.05
+    transfer_learning: true
+    knowledge_distillation: true
+    
+  # 环境共演化
+    co_evolution:
+      adaptation_rate: 0.01
+      complexity_growth: 0.05
+      difficulty_scaling: true
+
+# 可视化配置
+visualization:
+  # 3D渲染
+  render_3d:
+    engine: "pyglet"
+    resolution: [1920, 1080]
+    fps: 60
+    lighting: true
+    shadows: true
+    
+  # 数据仪表板
+  dashboard:
+    framework: "dash"
+    refresh_rate: 1.0
+    charts: ["line", "bar", "heatmap", "network"]
+    
+  # 实时监控
+  monitoring:
+    brain_activity: true
+    learning_curves: true
+    evolution_progress: true
+    environment_state: true
+
+# 实验配置
+experiments:
+  # 认知能力测试
+  cognitive_tests:
+    memory_tests: ["episodic", "semantic", "working"]
+    reasoning_tests: ["deductive", "inductive", "abductive"]
+    creativity_tests: ["fluency", "flexibility", "originality"]
+    observation_tests: ["visual", "auditory", "temporal"]
+    attention_tests: ["selective", "sustained", "divided"]
+    imagination_tests: ["scenario", "causal", "temporal"]
+    
+  # 进化实验
+  evolution_experiments:
+    single_agent_evolution: true
+    multi_agent_evolution: true
+    co_evolution: true
+    cultural_evolution: true
+    
+  # 比较基准
+  benchmarks:
+    include_traditional_ai: true
+    include_human_performance: true
+    include_evolutionary_algorithms: true
+
+# 性能配置
+performance:
+  # 并行计算
+  parallel_processing:
+    cpu_cores: "auto"
+    gpu_devices: "auto"
+    distributed: false
+    
+  # 内存管理
+  memory_management:
+    cache_size: "1GB"
+    garbage_collection: true
+    memory_monitoring: true
+    
+  # 存储优化
+  storage:
+    model_checkpointing: true
+    data_compression: true
+    auto_save_interval: 3600  # seconds
+
+# 调试配置
+debug:
+  detailed_logging: false
+  performance_profiling: false
+  memory_profiling: false
+  visualization_debug: false
+  save_intermediate_results: false
+
+# 安全配置
+security:
+  sandbox_environment: true
+  resource_limits:
+    cpu_time: 3600  # seconds
+    memory: "4GB"
+    disk_space: "10GB"
+  input_validation: true
+  output_sanitization: true

@@ -1,0 +1,236 @@
+# Cognitive Evolution Lab - Git Ignore File
+# ==========================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# PyTorch
+*.pth
+*.pt
+*.pkl
+*.pickle
+checkpoints/
+.pt_files/
+torch_model_*
+model_*.pt
+best_model_*.pt
+
+# TensorFlow
+*.h5
+*.hdf5
+*.pb
+*.tflite
+models/
+tensorflow_model_*
+saved_model/
+
+# Gym/RL related
+logs/
+tensorboard_logs/
+runs/
+wandb/
+mlruns/
+.tensorboard/
+evals/
+rollouts/
+
+# Experiment data
+experiment_data/
+results/
+*.csv
+*.json
+*.jsonl
+*.log
+*.txt
+experiments/
+*.npy
+*.npz
+*.mat
+*.pkl
+
+# Visualization outputs
+figures/
+plots/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.eps
+visualization_output/
+
+# Configuration files with secrets
+secrets/
+private_config.yaml
+local_config.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Large data files
+data/large/
+*.h5
+*.hdf5
+large_datasets/
+
+# Virtual environments
+/venv
+/env
+.venv
+.env
+
+# Model artifacts
+models/
+*.pkl
+*.joblib
+model_artifacts/
+
+# DVC files
+.dvcignore
+.dvc/cache/
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Ray Tune
+ray_results/
+
+# Datasets
+datasets/raw/
+datasets/processed/
+
+# Cache directories
+.cache/
+.pytest_cache/
+.coverage_cache/

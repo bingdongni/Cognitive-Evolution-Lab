@@ -1,0 +1,216 @@
+# Cognitive Evolution Lab - 环境特定配置
+# 作者: bingdongni
+
+# Windows环境配置
+windows:
+  python_version: "3.9+"
+  required_tools:
+    - git
+    - visual_studio_build_tools
+    - cmake
+    - vcpkg
+  
+  dependencies:
+    visual_cpp_redistributable: true
+    directx_runtime: true
+    opengl_runtime: true
+    
+  environment_variables:
+    PYTHONPATH: "./src;./models;./data"
+    CUDA_PATH: "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8"
+    CUDA_PATH_V11_8: "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8"
+  
+  # Windows特定设置
+  multiprocessing:
+    start_method: "spawn"
+    max_workers: 4
+    
+  gpu_support:
+    cuda_available: true
+    cudnn_available: true
+    tensorrt_available: false
+
+# Linux环境配置
+linux:
+  python_version: "3.9+"
+  required_tools:
+    - build-essential
+    - python3-dev
+    - python3-pip
+    - git
+    
+  system_dependencies:
+    - libopencv-dev
+    - libgl1-mesa-glx
+    - libglew-dev
+    - libasound2-dev
+    - portaudio19-dev
+    
+  environment_variables:
+    LD_LIBRARY_PATH: "/usr/local/lib:$LD_LIBRARY_PATH"
+    
+  # Linux特定设置
+  multiprocessing:
+    start_method: "fork"
+    max_workers: 8
+    
+  gpu_support:
+    cuda_available: true
+    cudnn_available: true
+    tensorrt_available: true
+
+# macOS环境配置
+macos:
+  python_version: "3.9+"
+  required_tools:
+    - xcode_command_line_tools
+    - homebrew
+    
+  system_dependencies:
+    - opencv
+    - portaudio
+    - sdl2
+    
+  environment_variables:
+    DYLD_LIBRARY_PATH: "/usr/local/lib:$DYLD_LIBRARY_PATH"
+    
+  # macOS特定设置
+  multiprocessing:
+    start_method: "fork"
+    max_workers: 4
+    
+  gpu_support:
+    cuda_available: false
+    cudnn_available: false
+    tensorrt_available: false
+
+# 硬件配置模板
+hardware_templates:
+  # 低端配置 (基础学习)
+  low_end:
+    cpu: "4-core"
+    ram: "4GB"
+    gpu: "集成显卡"
+    storage: "20GB"
+    performance_tier: "basic"
+    
+  # 中端配置 (推荐)
+  mid_range:
+    cpu: "8-core"
+    ram: "8GB"
+    gpu: "GTX 1660或更高"
+    storage: "50GB"
+    performance_tier: "standard"
+    
+  # 高端配置 (专业研究)
+  high_end:
+    cpu: "16-core"
+    ram: "32GB"
+    gpu: "RTX 3080或更高"
+    storage: "100GB SSD"
+    performance_tier: "professional"
+    
+  # 超高端配置 (企业级)
+  ultra_high:
+    cpu: "32-core"
+    ram: "64GB"
+    gpu: "RTX 4090或A100"
+    storage: "500GB NVMe SSD"
+    performance_tier: "enterprise"
+
+# 依赖包版本锁定
+dependency_versions:
+  # 核心框架
+  torch: ">=1.12.0,<1.13.0"
+  numpy: ">=1.21.0,<1.22.0"
+  gym: ">=0.24.0,<0.25.0"
+  
+  # 可视化
+  pygame: ">=2.1.0,<2.2.0"
+  matplotlib: ">=3.5.0,<3.6.0"
+  plotly: ">=5.10.0,<5.11.0"
+  
+  # 科学计算
+  scipy: ">=1.7.0,<1.8.0"
+  scikit_learn: ">=1.1.0,<1.2.0"
+  
+  # 强化学习
+  stable_baselines3: ">=1.6.0,<1.7.0"
+  ray: ">=2.0.0,<2.1.0"
+  
+  # 量子计算
+  qiskit: ">=0.40.0,<0.41.0"
+  
+  # 系统工具
+  tqdm: ">=4.64.0,<4.65.0"
+  loguru: ">=0.6.0,<0.7.0"
+  pyyaml: ">=6.0,<7.0"
+
+# 性能优化配置
+optimization:
+  # 自动硬件检测
+  auto_hardware_detection: true
+  
+  # 内存优化
+  memory_optimization:
+    gradient_checkpointing: false
+    mixed_precision: "auto"
+    model_sharding: false
+    
+  # 计算优化
+  computation_optimization:
+    parallel_processing: true
+    vectorized_operations: true
+    numba_jit: false
+    
+  # 存储优化
+  storage_optimization:
+    model_compression: false
+    data_caching: true
+    lazy_loading: true
+
+# 开发环境配置
+development:
+  # 代码质量
+  code_quality:
+    black_formatting: true
+    flake8_linting: true
+    mypy_type_checking: false
+    pytest_testing: true
+    
+  # 调试工具
+  debugging:
+    ipdb_debugger: false
+    memory_profiler: false
+    line_profiler: false
+    tensorboard_logging: true
+    
+  # 文档生成
+  documentation:
+    sphinx_docs: true
+    autodoc: true
+    api_reference: true
+    examples: true
+
+# 生产环境配置
+production:
+  # 安全设置
+  security:
+    secure_mode: true
+    input_validation: true
+    output_sanitization: true
+    resource_limits: true
+    
+  # 监控设置
+  monitoring:
+    performance_monitoring: true
+    error_tracking: true
+    resource_usage: true
+    health_checks: true
+    
+  # 备份设置
+  backup:
+    auto_backup: true
+    backup_interval: 3600  # 1小时
+    backup_retention: 7    # 7天
+    backup_location: "./backups"

@@ -1,0 +1,596 @@
+# 认知测试示例数据
+# 作者: bingdongni
+# 这些数据用于认知能力测试的演示和基准
+
+# 记忆测试数据
+memory_test_data:
+  # 情景记忆测试
+  episodic_memory:
+    test_items:
+      - content: "今天学习了一个新的深度学习算法"
+        timestamp: 1703123456
+        emotional_valence: 0.7
+        personal_relevance: 0.8
+        detail_level: 0.9
+        
+      - content: "和同事讨论了认知科学的最新进展"
+        timestamp: 1703123466
+        emotional_valence: 0.6
+        personal_relevance: 0.7
+        detail_level: 0.6
+        
+      - content: "完成了一个复杂的编程项目"
+        timestamp: 1703123476
+        emotional_valence: 0.9
+        personal_relevance: 0.9
+        detail_level: 0.8
+        
+      - content: "观看了关于人工智能的TED演讲"
+        timestamp: 1703123486
+        emotional_valence: 0.5
+        personal_relevance: 0.6
+        detail_level: 0.4
+        
+      - content: "读了一篇关于神经网络的论文"
+        timestamp: 1703123496
+        emotional_valence: 0.4
+        personal_relevance: 0.8
+        detail_level: 0.7
+  
+  # 语义记忆测试
+  semantic_memory:
+    factual_knowledge:
+      - domain: "artificial_intelligence"
+        fact: "人工智能是计算机科学的一个分支"
+        confidence: 0.95
+        evidence_count: 10
+        
+      - domain: "machine_learning"
+        fact: "深度学习使用多层神经网络"
+        confidence: 0.92
+        evidence_count: 15
+        
+      - domain: "cognitive_science"
+        fact: "认知科学研究心智和思维过程"
+        confidence: 0.90
+        evidence_count: 8
+        
+      - domain: "evolutionary_algorithms"
+        fact: "进化算法模拟自然选择过程"
+        confidence: 0.88
+        evidence_count: 12
+        
+      - domain: "neuroscience"
+        fact: "神经元通过突触传递电信号"
+        confidence: 0.93
+        evidence_count: 20
+        
+    conceptual_relationships:
+      - concept_a: "神经网络"
+        relation: "是"
+        concept_b: "机器学习"
+        strength: 0.9
+        bidirectional: true
+        
+      - concept_a: "深度学习"
+        relation: "属于"
+        concept_b: "机器学习"
+        strength: 0.95
+        bidirectional: false
+        
+      - concept_a: "认知"
+        relation: "产生"
+        concept_b: "智能行为"
+        strength: 0.8
+        bidirectional: false
+        
+  # 工作记忆测试
+  working_memory:
+    digit_span_test:
+      forward_sequence: [3, 7, 1, 9, 2, 5, 8]
+      backward_sequence: [8, 5, 2, 9, 1, 7, 3]
+      max_span: 7
+      accuracy: 0.85
+      
+    spatial_memory_test:
+      grid_size: [4, 4]
+      sequence_length: 6
+      target_positions: [[1, 2], [3, 1], [0, 3], [2, 0], [1, 1], [3, 3]]
+      accuracy: 0.83
+      
+    dual_task_test:
+      primary_task: "digit_monitoring"
+      secondary_task: "tone_discrimination"
+      interference_level: 0.3
+      dual_task_cost: 0.25
+      
+  # 程序记忆测试
+  procedural_memory:
+    motor_skills:
+      - skill: "键盘打字"
+        proficiency: 0.85
+        speed_wpm: 65
+        accuracy: 0.95
+        practice_sessions: 50
+        
+      - skill: "骑自行车"
+        proficiency: 0.95
+        balance_score: 0.92
+        turning_ability: 0.88
+        practice_sessions: 200
+        
+    cognitive_procedures:
+      - procedure: "问题解决步骤"
+        steps: ["定义问题", "分析原因", "生成方案", "评估选择", "实施方案"]
+        automation_level: 0.7
+        transfer_applications: 15
+        
+      - procedure: "学习新技能方法"
+        steps: ["观察演示", "模仿练习", "重复训练", "反思改进", "独立应用"]
+        automation_level: 0.6
+        success_rate: 0.8
+
+# 推理测试数据
+reasoning_test_data:
+  # 演绎推理测试
+  deductive_reasoning:
+    syllogisms:
+      - major_premise: "所有鸟类都有羽毛"
+        minor_premise: "企鹅是鸟类"
+        conclusion: "企鹅有羽毛"
+        validity: "valid"
+        difficulty: "easy"
+        
+      - major_premise: "如果下雨，地面会湿"
+        minor_premise: "正在下雨"
+        conclusion: "地面会湿"
+        validity: "valid"
+        difficulty: "easy"
+        
+      - major_premise: "所有科学家都很有好奇心"
+        minor_premise: "爱因斯坦是科学家"
+        conclusion: "爱因斯坦很有好奇心"
+        validity: "valid"
+        difficulty: "medium"
+        
+    conditional_reasoning:
+      - condition: "如果明天下雨，比赛就会取消"
+        antecedent: "明天下雨"
+        consequent: "比赛取消"
+        validity: "modus_ponens"
+        confidence: 0.9
+        
+      - condition: "如果学习努力，成绩就会提高"
+        negation_antecedent: "学习不努力"
+        conclusion: "成绩不会提高"
+        validity: "invalid"
+        confidence: 0.3
+        
+  # 归纳推理测试
+  inductive_reasoning:
+    pattern_recognition:
+      sequence_1: [2, 4, 6, 8, 10, ?]
+      pattern: "偶数递增"
+      next_value: 12
+      confidence: 0.95
+      
+      sequence_2: [1, 1, 2, 3, 5, 8, ?]
+      pattern: "斐波那契数列"
+      next_value: 13
+      confidence: 0.9
+      
+      sequence_3: ["红", "蓝", "红", "蓝", ?, "蓝"]
+      pattern: "交替颜色"
+      next_value: "红"
+      confidence: 0.85
+      
+    generalization:
+      observation: "观察到天鹅1是白的"
+      observation_2: "观察到天鹅2是白的"
+      observation_3: "观察到天鹅3是白的"
+      generalization: "所有天鹅都是白的"
+      confidence: 0.7
+      evidence_strength: "moderate"
+      
+  # 溯因推理测试
+  abductive_reasoning:
+    phenomena:
+      - observation: "草是湿的"
+        possible_explanations: 
+          - "下雨了"
+          - "有人洒了水"
+          - "露水凝结"
+        best_explanation: "下雨了"
+        explanation_strength: 0.8
+        
+      - observation: "街上湿了"
+      - explanation_qualities:
+        - "下雨了": {plausibility: 0.9, simplicity: 0.8, explanatory_power: 0.9}
+        - "洒水车经过": {plausibility: 0.6, simplicity: 0.9, explanatory_power: 0.7}
+        - "水管爆裂": {plausibility: 0.3, simplicity: 0.7, explanatory_power: 0.4}
+      best_explanation: "下雨了"
+      
+    diagnostic_reasoning:
+      symptom: "头痛、发热、咳嗽"
+      possible_causes:
+        - "感冒"
+        - "流感"
+        - "过敏"
+      diagnostic_criteria:
+        symptoms_present: 3
+        symptom_severity: 0.7
+        symptom_duration: 2  # days
+      best_diagnosis: "感冒"
+      confidence: 0.8
+
+# 创造力测试数据
+creativity_test_data:
+  # 发散思维测试
+  divergent_thinking:
+    alternate_uses_test:
+      stimulus: "砖头"
+      original_use: "建筑材料"
+      creative_uses:
+        - "镇纸": {novelty: 0.8, feasibility: 0.9, usefulness: 0.7}
+        - "武器": {novelty: 0.7, feasibility: 0.8, usefulness: 0.3}
+        - "艺术品": {novelty: 0.9, feasibility: 0.6, usefulness: 0.5}
+        - "书签": {novelty: 0.6, feasibility: 0.9, usefulness: 0.8}
+      fluency_score: 4
+      flexibility_score: 3
+      originality_score: 0.75
+      
+    consequences_test:
+      stimulus: "如果重力突然消失"
+      consequences:
+        - "人们会漂浮"
+        - "水不会流动"
+        - "建筑物会倒塌"
+        - "太空旅行更容易"
+      novelty_scores: [0.7, 0.8, 0.6, 0.9]
+      usefulness_scores: [0.3, 0.9, 0.2, 0.8]
+      
+  # 收敛思维测试
+  convergent_thinking:
+    remote_associates_test:
+      problem: "找到与三个词都相关的第四个词"
+      target_words: ["时间", "纸", "飞"]
+      associate: "浪费"
+      connection_strength: 0.85
+      
+      target_words: ["狗", "猫", "老鼠"]
+      associate: "动物"
+      connection_strength: 0.9
+      
+    insight_problems:
+      problem: "一个农民有17只羊，除了9只都死了，还剩几只羊？"
+      answer: 9
+      insight_required: true
+      common_mistake: "17-9=8"
+      correct_reasoning: "除了9只都死了 = 9只还活着"
+      
+  # 创意问题解决
+  creative_problem_solving:
+    design_challenges:
+      challenge: "设计一个适合老年人的智能家居系统"
+      constraints:
+        - "操作简单"
+        - "成本合理"
+        - "安全可靠"
+      creative_solutions:
+        - "语音控制的智能助手"
+        - "大按钮遥控器"
+        - "自动检测危险的传感器系统"
+      evaluation_criteria:
+        - novelty: 0.7
+        - feasibility: 0.8
+        - usefulness: 0.9
+        - aesthetics: 0.6
+
+# 观察力测试数据
+observation_test_data:
+  # 视觉观察测试
+  visual_observation:
+    pattern_recognition:
+      pattern_type: "geometric"
+      difficulty: "medium"
+      target_elements:
+        - shape: "circle"
+          color: "red"
+          count: 3
+          positions: [[1,1], [3,1], [2,3]]
+          
+        - shape: "square"
+          color: "blue"
+          count: 2
+          positions: [[1,3], [3,3]]
+      accuracy: 0.9
+      reaction_time: 2500  # milliseconds
+      
+    detail_detection:
+      image_description: "城市街道场景"
+      hidden_details:
+        - "路牌上的拼写错误"
+        - "停在路边的红色自行车"
+        - "商店橱窗里的特价标签"
+        - "行人手中的咖啡杯"
+      detection_accuracy: 0.75
+      attention_focus: "selective"
+      
+  # 异常检测测试
+  anomaly_detection:
+    normal_patterns:
+      - data_type: "sensor_readings"
+        normal_range: [20.0, 25.0]
+        variance: 1.5
+        
+      - data_type: "user_behavior"
+        typical_duration: [30, 120]  # seconds
+        common_actions: ["view", "click", "scroll"]
+        
+    anomalous_examples:
+      - data_type: "sensor_readings"
+        anomalous_value: 45.6
+        deviation_score: 2.8
+        anomaly_type: "spike"
+        
+      - data_type: "user_behavior"
+        unusual_action: "rapid_clicking"
+        deviation_score: 2.1
+        duration: 2  # seconds
+        
+  # 时间序列观察
+  temporal_observation:
+    trends:
+      - trend_type: "increasing"
+        time_period: "week_1"
+        slope: 0.15
+        consistency: 0.8
+        
+      - trend_type: "stable"
+        time_period: "week_2"
+        variance: 0.05
+        consistency: 0.9
+        
+    seasonal_patterns:
+      - pattern: "daily_cycle"
+        peak_hours: [14, 15, 16]
+        low_hours: [2, 3, 4]
+        amplitude: 0.3
+        
+      - pattern: "weekly_pattern"
+        peak_day: "wednesday"
+        low_day: "sunday"
+        amplitude: 0.2
+
+# 注意力测试数据
+attention_test_data:
+  # 选择性注意测试
+  selective_attention:
+    stroop_test:
+      conditions:
+        - name: "congruent"
+          stimulus: "红色"
+          ink_color: "红色"
+          reaction_time: 650
+          accuracy: 0.98
+          
+        - name: "incongruent"
+          stimulus: "红色"
+          ink_color: "蓝色"
+          reaction_time: 850
+          accuracy: 0.95
+          
+        - name: "neutral"
+          stimulus: "XXXXX"
+          ink_color: "绿色"
+          reaction_time: 700
+          accuracy: 0.99
+      stroop_effect: 200  # milliseconds
+      
+    visual_search:
+      target_present_trials: 20
+      target_absent_trials: 20
+      target_color: "红色"
+      distractor_colors: ["蓝色", "绿色", "黄色"]
+      accuracy_present: 0.92
+      accuracy_absent: 0.88
+      reaction_time_present: 1200
+      reaction_time_absent: 1800
+      
+  # 持续性注意测试
+  sustained_attention:
+    vigilance_task:
+      task_duration: 30  # minutes
+      signal_rate: 0.1   # 10% of trials are signals
+      false_alarm_rate: 0.08
+      hit_rate: 0.85
+      deterioration_over_time: true
+      fatigue_indicators:
+        - "reaction_time_increase"
+        - "accuracy_decrease"
+        
+    continuous_performance_test:
+      task_type: " CPT-3"
+      stimulus_rate: 1.0  # second
+      target_stimulus: "X"
+      non_target_stimulus: "A, B, C, D, E, F, G, H, I, J"
+      omission_errors: 3
+      commission_errors: 5
+      reaction_time: 350
+      variability: 120
+      
+  # 分散性注意测试
+  divided_attention:
+    dual_task_paradigm:
+      primary_task:
+        type: "tracking"
+        moving_target: true
+        accuracy: 0.78
+        reaction_time: 450
+        
+      secondary_task:
+        type: "monitoring"
+        target_auditory: "high_pitch_tone"
+        accuracy: 0.82
+        reaction_time: 600
+        
+      dual_task_cost:
+        primary_decrement: 0.15
+        secondary_decrement: 0.22
+        
+    multitasking_scenarios:
+      scenario: "driving_and_phone"
+      cognitive_load: "high"
+      performance_impact: -0.35
+      safety_risk: "elevated"
+
+# 想象力测试数据
+imagination_test_data:
+  # 情景想象测试
+  scenario_imagination:
+    future_scenarios:
+      - context: "2050年的智能城市"
+        constraints: ["可持续发展", "人工智能", "人性化"]
+        scenario_elements:
+          - element: "自动驾驶飞行器"
+            feasibility: 0.7
+            desirability: 0.8
+            
+          - element: "垂直农场"
+            feasibility: 0.9
+            desirability: 0.9
+            
+          - element: "智能电网"
+            feasibility: 0.8
+            desirability: 0.7
+            
+        creativity_score: 0.8
+        
+      - context: "火星殖民地"
+      constraints: ["有限资源", "环境挑战", "团队合作"]
+      elements:
+        - element: "穹顶生态系统"
+          detail_level: 0.8
+          innovation_score: 0.7
+          
+        - element: "3D打印建筑"
+          detail_level: 0.9
+          innovation_score: 0.8
+        
+  # 因果想象测试
+  causal_imagination:
+    cause_effect_chains:
+      - cause: "人工智能普及"
+        immediate_effects: ["工作效率提升", "就业结构变化"]
+        second_order_effects: ["社会不平等", "新职业出现"]
+        long_term_effects: ["人类角色重新定义", "伦理问题"]
+        
+      - cause: "气候变化"
+        immediate_effects: ["极端天气增加"]
+        second_order_effects: ["农业减产", "人口迁移"]
+        long_term_effects: ["文明适应", "技术创新"]
+        
+    counterfactual_thinking:
+      scenario: "如果没有互联网"
+      possibilities:
+        - "信息传播更慢"
+        - "面对面交流更多"
+        - "商业方式不同"
+        - "社会结构变化"
+      probability_assessment: 0.3
+      
+  # 时间想象测试
+  temporal_imagination:
+    past_imagination:
+      time_period: "文艺复兴"
+      focus: "艺术家的日常生活"
+      elements:
+        - element: "工作室环境"
+          detail_level: 0.7
+          historical_accuracy: 0.8
+          
+        - element: "创作过程"
+          detail_level: 0.6
+          historical_accuracy: 0.7
+          
+    future_imagination:
+      time_period: "2100年"
+      scenario_type: "technological"
+      elements:
+        - element: "脑机接口普及"
+          probability: 0.6
+          impact_scope: "global"
+          
+        - element: "太空殖民"
+          probability: 0.4
+          impact_scope: "civilization"
+          
+  # 创意想象测试
+  creative_imagination:
+    conceptual_combinations:
+      - concept_a: "大脑"
+      concept_b: "网络"
+      combination: "思维网格"
+      novelty: 0.9
+      utility: 0.7
+      
+      concept_a: "音乐"
+      concept_b: "数学"
+      combination: "数学音乐理论"
+      novelty: 0.8
+      utility: 0.8
+      
+    imaginative_scenarios:
+      - scenario: "植物会说话的世界"
+        domain: "fantasy"
+        creativity_level: 0.9
+        internal_consistency: 0.8
+        
+      - scenario: "时间可以储存的世界"
+        domain: "science_fiction"
+        creativity_level: 0.85
+        internal_consistency: 0.7
+
+# 基准性能数据
+benchmark_data:
+  human_baselines:
+    memory:
+      episodic_memory_accuracy: 0.85
+      working_memory_capacity: 7
+      long_term_retention_rate: 0.7
+      
+    reasoning:
+      deductive_reasoning_accuracy: 0.80
+      inductive_reasoning_accuracy: 0.70
+      abductive_reasoning_accuracy: 0.60
+      
+    creativity:
+      divergent_thinking_fluency: 15  # ideas per minute
+      creative_originality_score: 0.65
+      divergent_flexibility_score: 0.70
+      
+    observation:
+      visual_attention_span: 20  # seconds
+      pattern_recognition_accuracy: 0.88
+      anomaly_detection_sensitivity: 0.75
+      
+    attention:
+      selective_attention_accuracy: 0.92
+      sustained_attention_durability: 30  # minutes
+      divided_attention_efficiency: 0.60
+      
+    imagination:
+      scenario_generation_quality: 0.75
+      causal_reasoning_depth: 0.70
+      temporal_imagination_scope: 0.65
+      
+  ai_baselines:
+    traditional_ml:
+      memory_consistency: 0.95
+      reasoning_precision: 0.85
+      creativity_originality: 0.30
+      
+    modern_ai:
+      memory_accuracy: 0.92
+      reasoning_confidence: 0.88
+      creativity_score: 0.60
